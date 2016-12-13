@@ -17,7 +17,7 @@ public class DemoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_demo);
 
-        //隐藏MX的SmartBar
+        //隐藏魅族的SmartBar,这句话可要可不要，不是必须
         SmartBarUtils.hide(getWindow().getDecorView());
 
         //透明状态栏

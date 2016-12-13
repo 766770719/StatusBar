@@ -62,6 +62,7 @@ public class StatusBarUtils {
      */
     public static void translucentStatusBar(Fragment fragment, View fitsSystemWindowsView) {
         if (canTranslucentStatusBar(fragment.getContext())) { //可以透明状态栏
+            translucentStatusBar(fragment.getActivity(), null);
             setStatusBarColor(fitsSystemWindowsView);
         }
     }

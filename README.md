@@ -16,7 +16,7 @@ public class DemoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_demo);
 
-        //隐藏MX的SmartBar
+        //隐藏魅族的SmartBar,这句话可要可不要，不是必须
         SmartBarUtils.hide(getWindow().getDecorView());
 
         //透明状态栏
@@ -29,24 +29,6 @@ public class DemoActivity extends Activity {
 ```
 
 #####2.在Fragment中:
-包含Fragment的Activity：
-```
-public class DemoFragmentActivity extends FragmentActivity {
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo_fragment);
-
-        //隐藏MX的SmartBar
-        SmartBarUtils.hide(getWindow().getDecorView());
-
-        //透明状态栏,填充的控件在Fragment中,这里没有控件填null
-        StatusBarUtils.translucentStatusBar(this, null);
-    }
-}
-```
-Fragment中：
 ```
 public class DemoFragment extends Fragment {
 
